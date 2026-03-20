@@ -23,17 +23,13 @@ function App() {
   // -----------------------
   useEffect(() => {
 
-    fetch("http://127.0.0.1:5000/customers")
-      .then(res => res.json())
-      .then(data => setCustomers(data));
-
-    fetch("http://127.0.0.1:5000/items")
-      .then(res => res.json())
-      .then(data => setItemsDB(data));
-
-    // auto date
-    const today = new Date().toISOString().split("T")[0];
-    setDate(today);
+  fetch("https://billing-backend.onrender.com/customers")
+  fetch("https://billing-backend.onrender.com/items")
+  fetch("https://billing-backend.onrender.com/generate")
+  
+      // auto date
+      const today = new Date().toISOString().split("T")[0];
+      setDate(today);
 
   }, []);
 
